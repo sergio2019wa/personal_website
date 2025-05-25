@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Professional Portfolio</title>
+    <title>Sergio Medina - Professional Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -73,7 +73,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            color: black;
             position: relative;
             overflow: hidden;
             margin-bottom: 0;
@@ -193,7 +193,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center center top;
+            object-position: center center;
             border-radius: 50%;
         }
 
@@ -240,7 +240,94 @@
             color: white;
         }
 
-        /* Experience Section */
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-placeholder {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
         .experience-timeline {
             position: relative;
             max-width: 800px;
@@ -431,6 +518,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -448,8 +536,8 @@
             </div>
             <div class="hero-content">
                 <h1>Sergio Medina</h1>
-                <p>Full Stack Developer & Problem Solver</p>
-                <a href="#contact" class="cta-button">Let's Connect</a>
+                <p> Software Engineer | Java & Python Specialist</p>
+                <a href="#contact" class="cta-button">View My Work</a>
             </div>
         </section>
 
@@ -457,16 +545,17 @@
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
-                    <!-- <div class="profile-image">SM</div> -->
                     <div class="profile-image">
-                        <img src="20230127_Sergio Medina_10.jpg" alt="Your Name - Professional Photo">
+                        <img src="20230127_Sergio Medina_10.jpg" alt="Sergio Medina - Professional Photo">
                         <!-- Fallback text if image doesn't load -->
                         <span style="position: absolute; z-index: -1;">YN</span>
                     </div>
                     <div class="about-text">
-                        <p>I'm a passionate full-stack developer with 2+ years of experience creating... I specialize in ...</p>
-                        <p>My journey in tech started with a curiosity about how [ ] work, and has evolved into [ ]. I'm always eager to learn new technologies and take on challenging projects.</p>
-                        <p>When I'm not coding, you can find me trying out different AI models, watching Peaky Blinders, and 100 percent-ing the Witcher 3 </p>
+                        <p>I'm a passionate full-stack developer with 2+ years of experience creating </p>
+                        <p>My journey in tech started when Microsoft Engineers came to my high school and gave a presentation about what they do for work.
+                            I'm always eager to learn new technologies by throwing myself into a project and figuring it out even if feels like a different plantet. 
+                        </p>
+                        <p>When I'm not coding, you can find me contributing to Catchafire Projects, watching movies to add to my 500+ seen collection, or 100 percent-ing The Witcher 3: Wild Hunt.</p>
                     </div>
                 </div>
             </div>
@@ -479,22 +568,94 @@
                     <div class="skill-card">
                         <div class="skill-icon">💻</div>
                         <h3>Frontend Development</h3>
-                        <p>React, Vue.js, TypeScript, HTML5, CSS3, Responsive Design</p>
+                        <p>HTML5, CSS3, JavaScript, JSON, WordPress, Github Pages, Beatiful Soup</p>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">⚙️</div>
                         <h3>Backend Development</h3>
-                        <p>Node.js, Python, Express, Django, RESTful APIs, GraphQL</p>
+                        <p>Python, Java, RESTful APIs, C++, SQL</p>
                     </div>
-                    <div class="skill-card">
+                    <!-- <div class="skill-card">
                         <div class="skill-icon">☁️</div>
                         <h3>Cloud & DevOps</h3>
                         <p>AWS, Docker, Kubernetes, CI/CD, MongoDB, PostgreSQL</p>
-                    </div>
+                    </div> -->
                     <div class="skill-card">
                         <div class="skill-icon">🎨</div>
                         <h3>Design & UX</h3>
-                        <p>Figma, Adobe Creative Suite, User Research, Prototyping</p>
+                        <p>Figma, Protopie, User Research, Prototyping</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🔧</div>
+                        <h3>Other Tools/Skills</h3>
+                        <p>Git, Unity Engine, Soldering, Arduino, Reddit API, Raspberry Pi, Vim</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">🎮</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Overwatch Counter Guide</h3>
+                            <p class="project-description">Full-stack web application built with HTML, Python and CSS. Features interactive hero counter and info.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/ecommerce-project" target="_blank" class="project-link">GitHub</a>
+                                <a href="https://your-ecommerce-demo.com" target="_blank" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">📊</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Catchafire Landing Page (In production..)</h3>
+                            <p class="project-description">Interactive dashboard for analyzing sales data with custom charts and filters. Built with D3.js and Python backend for data processing.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/data-dashboard" target="_blank" class="project-link">GitHub</a>
+                                <a href="https://your-dashboard-demo.com" target="_blank" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">📱</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Task Management App</h3>
+                            <p class="project-description">Mobile-responsive productivity app with drag-and-drop functionality, team collaboration features, and real-time synchronization.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">PWA</span>
+                                <span class="tech-tag">WebSocket</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/task-manager" target="_blank" class="project-link">GitHub</a>
+                                <a href="https://your-taskapp-demo.com" target="_blank" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -506,7 +667,7 @@
                 <div class="experience-timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">2022 - Present</div>
-                        <h3 class="timeline-title">Senior Full Stack Developer</h3>
+                        <h3 class="timeline-title">Full Stack Developer</h3>
                         <div class="timeline-company">Tech Solutions Inc.</div>
                         <p>Led development of scalable web applications serving 100k+ users. Implemented microservices architecture, reducing system response time by 40%. Mentored junior developers and established coding best practices.</p>
                     </div>
@@ -554,12 +715,12 @@
 
     <footer>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/sergio-avi-medina/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/sergio2019wa" target="_blank">GitHub</a>
-            
-            <a href="Sergio2019wa@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/your-username" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your-username" target="_blank">GitHub</a>
+            <a href="https://twitter.com/your-username" target="_blank">Twitter</a>
+            <a href="mailto:your.email@example.com">Email</a>
         </div>
-        <p>&copy; 2025 Sergio Medina. All rights reserved.</p>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
     </footer>
 
     <script>
@@ -628,8 +789,8 @@
             });
         }, observerOptions);
 
-        // Observe all skill cards and timeline items
-        document.querySelectorAll('.skill-card, .timeline-item').forEach(el => {
+        // Observe all skill cards, project cards, and timeline items
+        document.querySelectorAll('.skill-card, .project-card, .timeline-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
